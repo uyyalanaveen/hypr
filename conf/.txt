@@ -1,0 +1,58 @@
+
+# Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+bind = $mod SHIFT, N, exec, swaync-client -t
+bind = $mod, RETURN, exec, alacritty  # open the terminal
+bind = ALT, F4, killactive, # close the active window
+bind = $mod, Q, killactive, # close the active window
+bind = CTRL ALT, DELETE, exec, swaylock # Lock the screen
+bind = $mod, C, exec, google-chrome-stable # Open google chrome
+bind = $mod SHIFT, M, exit, # Exit Hyprland all together no (force quit Hyprland)
+bind = $mod, E, exec, thunar # Show the graphical file browser
+bind = $mod, V, togglefloating, # Allow a window to float
+bind = $mod, R, exec, wofi -n # Show the graphical app launcher
+bind = $mod, P, pseudo, # dwindle
+bind = $mod, J, togglesplit, # dwindle
+
+
+
+# Switch workspaces with mod + [0-9]
+bind = $mod, 1, workspace, 1
+bind = $mod, 2, workspace, 2
+bind = $mod, 3, workspace, 3
+bind = $mod, 4, workspace, 4
+bind = $mod, 5, workspace, 5
+bind = $mod, 6, workspace, 6
+bind = $mod, 7, workspace, 7
+bind = $mod, 8, workspace, 8
+bind = $mod, 9, workspace, 9
+bind = $mod, 0, workspace, 10
+bind = $mod, h, workspace, e-1
+bind = $mod, l, workspace, e+1
+
+# Move active window to a workspace with mod + SHIFT + [0-9]
+bind = $mod SHIFT, 1, movetoworkspace, 1
+bind = $mod SHIFT, 2, movetoworkspace, 2
+bind = $mod SHIFT, 3, movetoworkspace, 3
+bind = $mod SHIFT, 4, movetoworkspace, 4
+bind = $mod SHIFT, 5, movetoworkspace, 5
+bind = $mod SHIFT, 6, movetoworkspace, 6
+bind = $mod SHIFT, 7, movetoworkspace, 7
+bind = $mod SHIFT, 8, movetoworkspace, 8
+bind = $mod SHIFT, 9, movetoworkspace, 9
+bind = $mod SHIFT, 0, movetoworkspace, 10
+
+# Scroll through existing workspaces with mod + scroll
+bind = $mod, mouse_down, workspace, e+1
+bind = $mod, mouse_up, workspace, e-1
+
+# Move/resize windows with mod + LMB/RMB and dragging
+bindm = $mod, mouse:272, movewindow
+bindm = $mod SHIFT, mouse:272, resizewindow
+
+
+
+# Move workspace to another monitor. Monitors are numberd 1, 2, and so on...
+bind = $mod SHIFT, F1, exec, ~/.config/hypr/scripts/dispatch movecurrentworkspacetomonitor -m 1
+bind = $mod SHIFT, F2, exec, ~/.config/hypr/scripts/dispatch movecurrentworkspacetomonitor -m 2
+bind = $mod SHIFT, F3, exec, ~/.config/hypr/scripts/dispatch movecurrentworkspacetomonitor -m 3
+

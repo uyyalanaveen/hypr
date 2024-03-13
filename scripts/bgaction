@@ -3,7 +3,7 @@
 #start swwww
 swww query || swww init
 
-swww img ~/.config/wallpapers/fish_2.jpg
+swww img ~/.config/wallpapers/river_to_castle_theme_blue.jpg
 
 # # Change background every 300 seconds
 # wallpaper_dir="$HOME/.config/wallpapers"
